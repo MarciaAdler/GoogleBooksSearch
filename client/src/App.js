@@ -1,12 +1,13 @@
 import React from "react";
-import Router, { Route } from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <BrowserRouter>
+      <div className="App">
         <Nav />
         <Route exact path="/">
           <Search />
@@ -17,8 +18,8 @@ function App() {
         <Route exact path="/saved">
           <Saved />
         </Route>
-      </Router>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

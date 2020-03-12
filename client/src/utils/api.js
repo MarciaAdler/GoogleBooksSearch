@@ -2,9 +2,9 @@ const axios = require("axios");
 
 export default {
   // Get all posts
-  searchBooks: function(req, res) {
+  searchBooks: function(req, response) {
     console.log(req);
-    const book = "The Help";
+    const book = req;
     return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book);
   },
   getBooks: function() {
