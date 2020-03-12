@@ -7,8 +7,8 @@ export default {
     const book = req;
     return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book);
   },
-  getBooks: function() {
-    return axios.get("api/books");
+  getBooks: function(req, response) {
+    return axios.get("api/books", response);
   },
 
   saveBook: function(book) {
