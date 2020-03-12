@@ -25,6 +25,20 @@ export default function Search() {
       .catch(err => console.log(err));
   }
 
+  function saveBook(props) {
+    console.log(props);
+    api
+      .saveBook({
+        authors: props.authors,
+        description: props.description,
+        link: props.link,
+        image: props.image,
+        title: props.title
+      })
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err));
+  }
+
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({ [name]: value });
@@ -34,6 +48,7 @@ export default function Search() {
     event.preventDefault();
     loadBooks(formObject.title);
   }
+
   return (
     <div>
       <form>
@@ -53,7 +68,8 @@ export default function Search() {
           description={book.volumeInfo.description}
           image={book.volumeInfo.imageLinks.smallThumbnail}
           link={book.volumeInfo.infoLink}
-        />
+          saveBook={saveBook}
+        ></Books>
       ))}
     </div>
   );

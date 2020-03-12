@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const bookSchema = new mongoose.Schema({
   authors: {
-    type: String,
+    type: Array,
     default: ""
   },
   description: {
@@ -13,16 +13,16 @@ const bookSchema = new mongoose.Schema({
 
   link: {
     type: String,
-    default: "",
-    unique: true
+    default: ""
   },
+
   image: {
     type: String,
     default: ""
   },
   title: {
     type: String,
-    required: true
+    default: ""
   }
 });
 

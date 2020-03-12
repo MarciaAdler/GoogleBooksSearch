@@ -11,8 +11,8 @@ export default {
     return axios.get("api/books");
   },
 
-  createBook: function(createBook) {
-    return axios.post("/api/books", createBook);
+  saveBook: function(book) {
+    return axios.post("/api/books", book);
   },
 
   deleteBook: function(id) {
