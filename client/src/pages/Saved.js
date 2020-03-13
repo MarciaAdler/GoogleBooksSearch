@@ -13,17 +13,27 @@ export default function Saved() {
     setBooks(data);
   }
 
+  function deleteBook(id) {
+    console.log(id);
+    api
+      .deleteBook(id)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+  }
+
   return (
     <div>
       {books
         ? books.map(book => (
             <SavedBook
               key={book._id}
+              id={book._id}
               title={book.title}
               authors={book.authors}
               description={book.description}
               image={book.image}
               link={book.link}
+              deleteBook={deleteBook}
             ></SavedBook>
           ))
         : "no books found"}

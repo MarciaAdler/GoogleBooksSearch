@@ -6,6 +6,6 @@ router
   .get(booksController.findAll)
   .post(booksController.create);
 
-router.route("/:id").delete(booksController.remove);
+router.route("/api/books/:id").delete(booksController.remove);
 
 module.exports = router;
