@@ -51,7 +51,7 @@ export default function Search() {
 
   return (
     <div>
-      <form>
+      <form className="d-flex justify-content-center mt-3">
         <input
           onChange={handleInputChange}
           name="title"
