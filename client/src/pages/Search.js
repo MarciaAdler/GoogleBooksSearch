@@ -15,7 +15,7 @@ export default function Search() {
             book.volumeInfo.title &&
             book.volumeInfo.authors &&
             book.volumeInfo.description &&
-            book.volumeInfo.imageLinks.smallThumbnail &&
+            book.volumeInfo.imageLinks.thumbnail &&
             book.volumeInfo.infoLink
         );
         console.log(search);
@@ -66,7 +66,7 @@ export default function Search() {
           title={book.volumeInfo.title}
           authors={book.volumeInfo.authors}
           description={book.volumeInfo.description}
-          image={book.volumeInfo.imageLinks.smallThumbnail}
+          image={book.volumeInfo.imageLinks.thumbnail}
           link={book.volumeInfo.infoLink}
           saveBook={saveBook}
         ></Books>
