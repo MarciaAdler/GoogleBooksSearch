@@ -10,14 +10,27 @@ export default function Search() {
     api
       .searchBooks(book)
       .then((request, res) => {
-        const search = request.data.items.filter(
-          book =>
-            book.volumeInfo.title &&
-            book.volumeInfo.authors &&
-            book.volumeInfo.description &&
-            book.volumeInfo.imageLinks.thumbnail &&
-            book.volumeInfo.infoLink
-        );
+        const books = request.data.items;
+        console.log(books);
+        const search = books.map(book => {
+          let bookObject = book.volumeInfo;
+          if (!bookObject.imageLinks) {
+            bookObject.imageLinks = {
+              thumbnail:
+                "https://via.placeholder.com/128x208?text=No+Image+Available"
+            };
+          }
+
+          return book;
+        });
+        // const search = books.filter(
+        //   book =>
+        //     book.volumeInfo.title &&
+        //     book.volumeInfo.authors &&
+        //     book.volumeInfo.description &&
+        //     book.volumeInfo.imageLinks.thumbnail &&
+        //     book.volumeInfo.infoLink
+        // );
         console.log(search);
         setBooks(search);
       })
