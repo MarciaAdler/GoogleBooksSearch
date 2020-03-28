@@ -19,7 +19,7 @@ export default function Books(props) {
         <div className="col-12 col-md-9 col-lg-9">
           <ul className="mt-3">
             <li>
-              <strong>title: {props.title}</strong>
+              <strong>Title: {props.title}</strong>
             </li>
             <li>
               <strong>Author(s): </strong>
