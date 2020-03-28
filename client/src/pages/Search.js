@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Books from "../components/Books";
 import api from "../utils/api";
-
+const styles = {
+  button: {
+    backgroundColor: "lightblue"
+  }
+};
 export default function Search() {
   const [books, setBooks] = useState([]);
   const [formObject, setFormObject] = useState({});
@@ -70,7 +74,9 @@ export default function Search() {
           name="title"
           placeholder="Title (required)"
         />
-        <button onClick={handleFormSubmit}>Submit Book</button>
+        <button style={styles.button} onClick={handleFormSubmit}>
+          Submit Book
+        </button>
       </form>
 
       {books.map(book => (
