@@ -19,10 +19,16 @@ export default function Books(props) {
         <div className="col-12 col-md-9 col-lg-9">
           <ul className="mt-3">
             <li>
-              <strong>{props.title}</strong>
+              <strong>Title: {props.title}</strong>
             </li>
-            <li>{props.authors}</li>
-            <li>{props.description}</li>
+            <li>
+              <strong>Author(s): </strong>
+              {props.authors}
+            </li>
+            <li>
+              <strong>Description: </strong>
+              {props.description}
+            </li>
             <li>
               <a href={props.link}>Link</a>
             </li>
