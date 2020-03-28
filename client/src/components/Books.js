@@ -1,5 +1,9 @@
 import React from "react";
-
+const styles = {
+  button: {
+    backgroundColor: "lightgrey"
+  }
+};
 export default function Books(props) {
   return (
     <div>
@@ -8,6 +12,7 @@ export default function Books(props) {
           <img className="ml-3 mt-3" alt={props.title} src={props.image} />
           <br />
           <button
+            style={styles.button}
             className="ml-3"
             onClick={() => {
               props.saveBook(props);
