@@ -94,4 +94,4 @@ Once you open the code, run an npm install on the front-end and back-end using t
 
 The live app can accessed at: https://stormy-springs-52175.herokuapp.com/
 
-![Google Books Screenshot](GoogleBooksScreenShot.png)
+![Google Books Screenshot](./client/GoogleBooksScreenShot.png)
