@@ -17,14 +17,14 @@ export default function Saved() {
     console.log(id);
     api
       .deleteBook(id)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   }
 
   return (
     <div>
       {books
-        ? books.map(book => (
+        ? books.map((book) => (
             <SavedBook
               key={book._id}
               id={book._id}

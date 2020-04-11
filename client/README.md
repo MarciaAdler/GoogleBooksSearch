@@ -66,3 +66,32 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## npm packages to install
+
+Once you open the code, run an npm install on the front-end and back-end using the terminal.
+
+<ul>
+<li>npm packages to install on back-end</li>
+    <ul>
+    <li>axios</li>
+    <li>express</li>
+    <li>if-env</li>
+    <li>mongoose</li>
+    </ul>
+<li>npm packages to install on front-end</li>
+    <ul>
+    <li>axios</li>
+    <li>if-env</li>
+    <li>react</li>
+    <li>react-dom</li>
+    <li>react-router-dom</li>
+    <li>react-scripts</li>
+    </ul>
+</ul>
+
+## App link
+
+The live app can accessed at: https://stormy-springs-52175.herokuapp.com/
+
+![Google Books Screenshot](GoogleBooksScreenShot.png)
